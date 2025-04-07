@@ -20,6 +20,8 @@ This lab will guide you through the process of creating Custom Metadata,Profile,
 This lab assumes you have:
 
 - Access to WCC Marketplace Environment
+git cherry-pick 13f25b840b08633c164ea060262c82d836b12372
+
 
 This lab assumes you have completed:
 
@@ -283,16 +285,16 @@ To create a new profile:
 - After a profile has been created, it appears in the Search and New Check In menus on the toolbar after refreshing the browser session.
 - By default, all profiles are listed as options under both menus. However, not every user is authorized to use all of the listed profiles.
 - On the Edit Content Profile Links page, select or clear applicable check boxes to specify the profiles to display.
-    ![TThis image shows the WCC Add Profile Rule menu](./images/Task4_Create_Profile_step6.png "This image shows the WCC Add Profile Rule menu")
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task4_create_crofile_step6.png "This image shows the WCC Add Profile Rule menu")
 - Click Restricted personalization links check box as Enabled .
 - Click Edit button .
-  ![TThis image shows the WCC Add Profile Rule menu](./images/Task4_Create_Profile_step7.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task4_create_profile_step7.png "This image shows the WCC Add Profile Rule menu")
 - Click Has Script for the check-in link check box and Click Edit Button.
-  ![TThis image shows the WCC Add Profile Rule menu](./images/Task4_Create_Profile_step8.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task4_create_profile_step8.png "This image shows the WCC Add Profile Rule menu")
 - Click Add button in Condition box.
-  ![TThis image shows the WCC Add Profile Rule menu](./images/Task4_Create_Profile_step9.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task4_create_profile_step9.png "This image shows the WCC Add Profile Rule menu")
 - Enter the name for the condition.
- ![TThis image shows the WCC Add Profile Rule menu](./images/Task4_Create_Profile_step10.png "This image shows the WCC Add Profile Rule menu")
+ ![TThis image shows the WCC Add Profile Rule menu](./images/task4_create_profile_step10.png "This image shows the WCC Add Profile Rule menu")
 - Choose appropriate condition to hide the link then click add.
 - The selected condition will be added to Clauses. then Click ok.
 

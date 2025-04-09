@@ -10,9 +10,9 @@ This lab will guide you through the process of creating Custom Metadata,Profile,
 
 - Download and install Oracle WebCenter Content Administration Desktop Client.
 - Create Custom Metadata.
-- Create a Profile.
-- Create a Profile Rule.
-- Create a Workflow(Criteria).
+- Create Profile.
+- Create Profile Rule.
+- Create Workflow(Criteria).
 - User , Groups and Role Assignment.
 
 ### Prerequisites
@@ -20,8 +20,6 @@ This lab will guide you through the process of creating Custom Metadata,Profile,
 This lab assumes you have:
 
 - Access to WCC Marketplace Environment
-git cherry-pick 13f25b840b08633c164ea060262c82d836b12372
-
 
 This lab assumes you have completed:
 
@@ -70,7 +68,7 @@ To Configure WebCenter Content Administration Desktop Client, follow the below s
 4. Wait for WebCenter Content Administration Dialog to open
 ![This image shows the WCC Administration Applets](./images/webcenter-admin-applet.png "WCC Administration Applets")
 
-## Task 2: Create a Custom Metadata
+## Task 2: Create Custom Metadata
 
 - To create Custom Metadata (Employee ID, Full Name,Policy Name etc) in WCC follow these steps:
 
@@ -223,7 +221,7 @@ Created By | User who created the Customer  | Date
 
 - This Completes Creating Custom Metadata Fields.
 
-## Task 3: Create a Profile Rules
+## Task 3: Create Profile Rules
 
 A profile consists of one or more rules and a trigger value. The rules determine how metadata fields are displayed on the Check In, Update, Content Information, and Search pages and if a rule is used (depending on how it is evaluated). Each rule consists of the following:
 
@@ -232,7 +230,7 @@ A profile consists of one or more rules and a trigger value. The rules determine
 - An option that indicates if it is a global rule and has a specified priority.
 - An option that indicates if the metadata fields in the rule are grouped and if an optional header is used.
 
-1. **To create a Profile Rules (CustomerProfileMetaDataRules,InsurenceTypeMetaDataRules,HRDepartmentMetadataRules) in WCC follow these steps**
+1. **To create Profile Rules (CustomerProfileMetaDataRules,InsurenceTypeMetaDataRules,HRDepartmentMetadataRules) in WCC follow these steps**
 
 - Login to WebCenter Content Administration Desktop Client as user with Administrator Privilege.
 - Click on Configuration Manager Link
@@ -288,7 +286,7 @@ A profile consists of one or more rules and a trigger value. The rules determine
 - Similarly Add all other metadata according the Customer Profile MetaData.
 - Create Similer Rule for Insurence Type MetaData and HR Department Metadata and Add the assoicated meta data to the rule.
 
-## Task 4: Create a Profile
+## Task 4: Create Profile
 
 Administrators can use content profiles to selectively include or reorder metadata fields to produce targeted Check In, Update, Content Information, and Search pages. Content profiles do not create or modify any Oracle WebCenter Content Server tables.They are simply used as a type of filter for what information is displayed.
 
@@ -367,7 +365,7 @@ To create a new profile:
 - Choose appropriate condition to hide the link then click add.
 - The selected condition will be added to Clauses. then Click ok.
 
-## Task 6: Creating a Workflows
+## Task 6: Create Workflows
 
 - A workflow specifies how to route content for review and approval before it is released to the system.
 - The workflow notifies users by e-mail when they have a file to review. For information about workflow types and uses

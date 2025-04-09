@@ -175,8 +175,7 @@ To Configure WebCenter Content Administration Desktop Client, follow the below s
 - Click check box Enable on User Interface.
 - Click check box Enable for Search Index if required.
 - Finally click ok to Create CreationDate meta data
-
-    ![TThis image shows the WCC Add custom metadata field menu](./images/task2-create-custom-metada-step9.png "This image shows the WCC Add custom metadata field menu")
+![TThis image shows the WCC Add custom metadata field menu](./images/task2-create-custom-metada-step9.png "This image shows the WCC Add custom metadata field menu")
 
 1. **Similarly  create following Metadata.**
 
@@ -230,13 +229,13 @@ A profile consists of one or more rules and a trigger value. The rules determine
 - An option that indicates if it is a global rule and has a specified priority.
 - An option that indicates if the metadata fields in the rule are grouped and if an optional header is used.
 
-1. **To create Profile Rules (CustomerProfileMetaDataRules,InsurenceTypeMetaDataRules,HRDepartmentMetadataRules) in WCC follow these steps**
+1. **To create Profile Rules (CustomerProfileMetaDataRules,InsuranceTypeMetaDataRules,HRDepartmentMetadataRules) in WCC follow these steps**
 
 - Login to WebCenter Content Administration Desktop Client as user with Administrator Privilege.
 - Click on Configuration Manager Link
-    ![TThis image shows the WCC Add Profile Rule menu](./images/task2-create-custom-metada-step1.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task2-create-custom-metada-step1.png "This image shows the WCC Add Profile Rule menu")
 - Click  Configuration Manger > Rules  button in Configuration Manager Menu.
-    ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step1.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step1.png "This image shows the WCC Add Profile Rule menu")
 - **Enter the Name for the Rule.**
          ```
          <copy>CustomerProfileMetadata</copy>
@@ -245,9 +244,9 @@ A profile consists of one or more rules and a trigger value. The rules determine
          ```
          <copy>Customer Profile Metadata Rules</copy>
          ```
-- Select Is group check box this will make this group meta data headder to appear in the form while creating document using this Profile Rule
-- Select Has group header check box
-- An activation condition allows a change in the profile behavior based on different inputs. For example, a rule is not active for the search page or for a contributor, or certain fields are hidden or overridden on check in. Also, because profiles are activated during any check-in process, distinctions are made between a browser check in and a batch-load check in.
+- **Select Is group check box** this will make this group meta data headder to appear in the form while creating document using this Profile Rule
+- Select **Has group header check box**
+- An **activation condition** allows a change in the profile behavior based on different inputs. For example, a rule is not active for the search page or for a contributor, or certain fields are hidden or overridden on check in. Also, because profiles are activated during any check-in process, distinctions are made between a browser check in and a batch-load check in.
  ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step2.png "This image shows the WCC Add Profile Rule menu")
   - You can base an activation condition for a rule on:
     - A system event: These include on-request events, on-submit events, and on-import events.
@@ -266,25 +265,25 @@ A profile consists of one or more rules and a trigger value. The rules determine
 - Click Fields add MetaData.
   - Once the Edit Rule config screen open click Add button.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step4.png "This image shows the WCC Add Profile Rule menu")
-- Click Display Information fields check box to show custom meta data select.
-- Select Field Name to add part of Rule.
-- Field position (required): Adjusts the general placement order of the metadata field. Values are top, middle, and bottom.
+- Click **Display Information fields check box** to show custom meta data select.
+- Select **Field Name** to add part of Rule.
+- **Field position (required):** Adjusts the general placement order of the metadata field. Values are top, middle, and bottom.
 - Once you select the both the values click ok.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step5.png "This image shows the WCC Add Profile Rule menu")
-- Once you click ok there will other menu will open here you can customise meta data details
-- Display type (required): Determines how the metadata field is displayed on the Check In and Search pages.Values can be Edit, Info Only, Hidden, Excluded, or Required. If required, a message is also required.
-- Click Use custom label check box the enter the field labale this allow to customise the metadata label values .
+- Once you click ok there will other menu will open here you can customize meta data details
+- **Display type (required):** Determines how the metadata field is displayed on the Check In and Search pages.Values can be Edit, Info Only, Hidden, Excluded, or Required. If required, a message is also required.
+- Click Use custom label check box the enter the field label this allow to customize the metadata label values .
          ```
          <copy>Customer Id</copy>
          ```
-- You can choose to select Exclude field from the group count checkbox this will exclude field count in the API Response
-- Use Default value (optional): Displays a default value for the metadata field.
-- Is Derived value (optional): Enables the metadata field to be set to a specified value on update or check in.
-- Has Restricted list (optional): Allows the list metadata field to be restricted to either a specific list of values or to a filtered list of values.
+- You can choose to **select Exclude field** from the group count checkbox this will exclude field count in the API Response
+- Use **Default value (optional):** Displays a default value for the metadata field.
+- Is **Derived value (optional):** Enables the metadata field to be set to a specified value on update or check in.
+- **Has Restricted list (optional):** Allows the list metadata field to be restricted to either a specific list of values or to a filtered list of values.
 - Once you enter the all the information click ok to add metadata to Profile Rule.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step6.png "This image shows the WCC Add Profile Rule menu")
 - Similarly Add all other metadata according the Customer Profile MetaData.
-- Create Similer Rule for Insurence Type MetaData and HR Department Metadata and Add the assoicated meta data to the rule.
+- Create similar Rule for Insurance Type MetaData and HR Department Metadata and Add the associated meta data to the rule.
 
 ## Task 4: Create Profile
 
@@ -306,11 +305,11 @@ To create a new profile:
 
 - Login to WebCenter Content Administration Desktop Client as user with Administrator Privilege.
 - Click on Configuration Manager Link
-    ![TThis image shows the WCC Add Profile Rule menu](./images/task2-create-custom-metada-step1.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task2-create-custom-metada-step1.png "This image shows the WCC Add Profile Rule menu")
 - Click  Configuration Manger > Profile button in Configuration Manager Menu.
-    ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step1.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step1.png "This image shows the WCC Add Profile Rule menu")
 - Click Trigger drop downs field and select Customer value in option list, click ok.
-    ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step2.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step2.png "This image shows the WCC Add Profile Rule menu")
 - Click Add button.
 - Enter the name of the new profile and click OK.
  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step3.png "This image shows the WCC Add Profile Rule menu")
@@ -347,19 +346,18 @@ To create a new profile:
 - After a profile has been created, it appears in the Search and New Check In menus on the toolbar after refreshing the browser session.
 - By default, all profiles are listed as options under both menus. However, not every user is authorized to use all of the listed profiles.
 - On the Edit Content Profile Links page, select or clear applicable check boxes to specify the profiles to display.
-    ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step6.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step6.png "This image shows the WCC Add Profile Rule menu")
 - Click Restricted personalization links check box as Enabled .
 - Click Edit button .
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step7.png "This image shows the WCC Add Profile Rule menu")
 - Click Has Script for the check-in link check box and Click Edit Button.
-
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step9.png "This image shows the WCC Add Profile Rule menu")
 - Click Add button in Condition box.
 - Enter the name for the condition.
             ```
                 <copy>HideForOtherUser </copy>
              ```
-  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step8.png "This image shows the WCC Add Profile Rule menu")
+ ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step8.png "This image shows the WCC Add Profile Rule menu")
  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step10.png "This image shows the WCC Add Profile Rule menu")
 
 - Choose appropriate condition to hide the link then click add.
@@ -418,7 +416,7 @@ After a workflow is enabled, it goes through several specific stages:
                 <copy> Customer Access  </copy>
              ```
 - Select an option from Original Author Edit Rule to specify if the original author can edit the revision or create a new revision if the item is rejected.
-![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step3.png "This image shows the WCC Add Profile Rule menu")
+ ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step3.png "This image shows the WCC Add Profile Rule menu")
 - To use a workflow template, select the Use Template check box and select the template name. This box is displayed only if a template currently exists. For more information, see Workflow and Script Templates.
 - To create a **Criteria workflow, select the Has Criteria Definition check box.** To create a sub-workflow, deselect the check box.
 - For a Criteria workflow, define the criteria by choosing the appropriate **Field, Operator, and Value. Field values include Content ID, Author, Type, Account and any custom metadata of type Text or Long Text**.
@@ -444,23 +442,23 @@ After a workflow is enabled, it goes through several specific stages:
  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step7.png "This image shows the WCC Add Profile Rule menu")
   - Select the type of users to be added to the step. Multiple types can be defined:
     - To add a group of users defined by an alias, click Add Alias. On the Add Alias to Step page, choose the alias from the displayed list.
-    - To add individual user logins, click Add User. On the Add User to Step page:
-    - To narrow the list of users, select the Use Filter check box, click Define Filter, select the filter criteria, and click OK.
-    - To select a range of users, click the first user, then press and hold Shift and click the last user in the range.
-    - To select users individually, press and hold the Ctrl key and click each user name.
-    - To add a variable user defined by a token, click Add Token. For information about creating tokens, see Creating, Editing, or Deleting a Token.
+    - To add individual **user logins, click Add User**. On the Add User to Step page:
+    - To narrow the list of users, **select the Use Filter check box**, click Define Filter, select the **filter criteria**, and click OK.
+    - To select a **range of users**, click the first user, then press and **hold Shift and click the last user in the range**.
+    - To select users individually, press and **hold the Ctrl key and click each user name**.
+    - To add a variable user defined by a token, **click Add Token**. For information about creating tokens, see Creating, Editing, or Deleting a Token.
      ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step5.png "This image shows the WCC Add Profile Rule menu")
 - Click OK.
-- Click the Exit Conditions tab.
+- Click the **Exit Conditions tab**.
   - Specify how many reviewers must approve the revision before it passes to the next step.
-    - To require approval by all reviewers, select All reviewers.
+    - To require approval by all reviewers, select **All reviewers**.
     - To specify a minimum number of reviewers who must approve the revision, select At least this many reviewers and enter the number.
      ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step8.png "This image shows the WCC Add Profile Rule menu")
   - Typically, exit conditions are useful when metadata could be changed by an external process during the workflow step. Use the following instructions if the step requires additional exit conditions to pass to the next step:
-    - Select the Use Additional Exit Condition check box.
+    - Select the **Use Additional Exit Condition check box**.
     - Click Edit.
-    - On the Edit Additional Exit Condition page, select a workflow condition or a metadata field from the Field list.
-    - Select an operator from the Operator list. Operator is a dependent choice list that shows operators associated with the Field.
+    - On the Edit **Additional Exit Condition page**, select a workflow condition or a metadata field from the Field list.
+    - Select an operator from the **Operator list**. Operator is a dependent choice list that shows operators associated with the Field.
     - Select a value from the Value list. Value is a dependent list based on the option chosen as the Field.
     - Click Add to add the conditional statement to the Condition Clause. The clause appears in the Condition Clause box. You can append multiple clauses with AND statements.
     - Repeat for as many conditions as required. To modify an expression, select it in the Condition Clause box, change the Field, Operator, or Value, and click Update.
@@ -469,7 +467,7 @@ After a workflow is enabled, it goes through several specific stages:
       - If Custom Condition Expression is deselected, the expression reverts to its original definition and all modifications are lost.
     - Click OK.
 
-- If the workflow requires conditional steps or special processing, click the Events tab and add the appropriate scripts. For more information, see Creating a Jump.
+- If the workflow requires conditional steps or special processing, click the Events tab and add the appropriate scripts. For more information, see **Creating a Jump**.
      ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step9.png "This image shows the WCC Add Profile Rule menu")
 - Click OK.
   - Add, edit, and delete steps as necessary to complete the workflow.

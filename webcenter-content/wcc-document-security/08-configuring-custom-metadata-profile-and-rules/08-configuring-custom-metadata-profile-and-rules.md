@@ -172,7 +172,7 @@ JobTitle | Designation of the employee within the company. | Text
 Email | Official email address of the employee. | Text
 PhoneNumber | Employee’s contact number. | Integer
 AccessLevel | Defines the level of access (Read-Only, Edit, Admin). | Text (Enable Option List)
-Reports To |Name or ID of the reporting manager. | Text
+ReportsTo |Name or ID of the reporting manager. | Text
 
 - This Completes Creating Custom Metadata Fields.
 

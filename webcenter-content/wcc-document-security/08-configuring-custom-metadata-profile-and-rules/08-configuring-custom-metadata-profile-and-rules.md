@@ -27,48 +27,7 @@ This lab assumes you have completed:
 - Lab: Create Users and Groups
 - Lab: Create Security Groups, Roles, Aliases and Accounts
 
-## Task 1: Configure Oracle WebCenter Content Administration Desktop Client
-
-To Configure WebCenter Content Administration Desktop Client, follow the below steps;
-
-1. Launch WebCenter Content Administration Desktop Client.
-
-<if type="Windows">
-
-- In Windows Start menu search **Oracle WebCenter Content Administration**
-- Click on **Oracle WebCenter Content Administration** app
- ![This image shows the WCC Administration Desktop Client](./images/wcc-admin-installed.png "WCC Administration Desktop Client")
-</if>
-
-<if type="MAC">
-
-- In Mac **Spotlight search** search **Oracle WebCenter Content Administration**
-- Click on **Oracle WebCenter Content Administration** app
- ![This image shows the WCC Administration Desktop Client](./images/webcenter-admin-launch-mac.png "WCC Administration Desktop Client")
-</if>
-
-2. Enter the **User Name, Password, Server**. Click **OK**.
-   - **User Name**: Enter
-         ```
-         <copy>weblogic</copy>
-         ```
-   - **Password**: Enter
-         ```
-        <copy>Welcome1</copy>
-         ```
-   - **Server**: Enter
-         ```
-         <copy>https://localhost:16200/cs/</copy>
-         ```
-    > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-document-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
-
-![This image shows the WCC Administration Desktop Client Login Screen](./images/webcenter-admin-login.png "WCC Administration Desktop Client Login")
-3. If **Warning** dialog is opened due to insecure certificate, press **Yes** to continue.
-![This image shows the WCC Administration Desktop Client Warning](./images/webcenter-admin-warning.png "WCC Administration Desktop Client Warning")
-4. Wait for WebCenter Content Administration Dialog to open
-![This image shows the WCC Administration Applets](./images/webcenter-admin-applet.png "WCC Administration Applets")
-
-## Task 2: Create Custom Metadata
+## Task 1 : Create Custom Metadata
 
 - To create Custom Metadata (Employee ID, Full Name,Policy Name etc) in WCC follow these steps:
 
@@ -86,33 +45,33 @@ To Configure WebCenter Content Administration Desktop Client, follow the below s
 ![This image shows the WCC Add custom metadata field menu](./images/task2-create-custom-metada-step3.png "This image shows the WCC Add custom metadata field menu")
 5. In Add CustomerId MetaData Field fill following details.
 
-    - **Field Caption: Name of the Field.**
+    - **Field Caption :** Name of the Field.
          ```
          <copy>CustomerID</copy>
          ```
-    - **Select Text as Field Type - Type of the Field.**
+    - Select Text as **Field Type** - Type of the Field.
         ```
          <copy>Text</copy>
          ```
-    - Meta Data Set - By default select Meta Data Set as DocMetadata.
+    - Meta Data Set - By default select **Meta Data Set** as DocMetadata.
         ```
          <copy>DocMetadata</copy>
         ```
 
-    - Give default value if required.
-    - Click check box Enable on User Interface.
-    - Click check box Enable for Search Index if required.
-    - Finally click ok to Create CustomerId meta data.
+    - Give **default value** if required.
+    - Click check box **Enable on User Interface**.
+    - Click check box **Enable for Search Index** if required.
+    - Finally click **ok** to Create CustomerId meta data.
 ![This image shows the WCC Add custom metadata field menu](./images/task2-create-custom-metada-step4.png "This image shows the WCC Add custom metadata field menu")
 
 1. **Similarly to Add PolicyType MetaData Field as Dropdown (Option List), follow these steps:**
 
    - Repeat the last step to add Custom metadata.
-   - **Field Caption: Name of the Field.**
+   - **Field Caption:** Name of the Field.
          ```
          <copy>PolicyType</copy>
          ```
-   - **Select Text as Field Type** – Type of the Field.
+   - Select Text as **Field Type** – Type of the Field.
           ```
           <copy>Text</copy>
           ```
@@ -154,7 +113,7 @@ To Configure WebCenter Content Administration Desktop Client, follow the below s
 
 1. **Similarly to Add  Creation Date Date field follow these steps:**
 
-- Repeat the last step to add Custom metadata.
+- Repeat the last step to **add Custom metadata**.
 - Enter Fields Name as **CreationDate** Then Click Ok.
          ```
          <copy>CreationDate</copy>
@@ -167,14 +126,14 @@ To Configure WebCenter Content Administration Desktop Client, follow the below s
          ```
          <copy>Date</copy>
          ```
-- **Meta Data Set** - By default select Meta Data Set as DocMetadata
+- **Metadata Set** - By default select Meta Data Set as DocMeta
          ```
          <copy>DocMetadata</copy>
          ```
-- Give default value if required.
-- Click check box Enable on User Interface.
-- Click check box Enable for Search Index if required.
-- Finally click ok to Create CreationDate meta data
+- Give **default** value if required.
+- Click check box **Enable on User Interface**.
+- Click check box **Enable for Search Index** if required.
+- Finally click **ok** to Create CreationDate meta data
 ![TThis image shows the WCC Add custom metadata field menu](./images/task2-create-custom-metada-step9.png "This image shows the WCC Add custom metadata field menu")
 
 1. **Similarly  create following Metadata.**
@@ -182,45 +141,40 @@ To Configure WebCenter Content Administration Desktop Client, follow the below s
 - **Customer Profile MetaData**
 Metadata Field | Definition | Field Type
 --- | --- | ---
-Customer ID | Unique identifier for each customer. | Text
-Customer Name | Full name of the policyholder. | Text
-Date of Birth | Customer’s birth date for policy verification. | Date
+CustomerID | Unique identifier for each customer. | Text
+CustomerName | Full name of the policyholder. | Text
+DateofBirth | Customer’s birth date for policy verification. | Date
 Phone | Customer’s registered contact number. | Integer
 Email | Email address for communication. | Text
 Address | Residential or official address of the customer. | Text
-Policy ID | Unique identifier for an insurance policy. | Integer
+PolicyID | Unique identifier for an insurance policy. | Integer
 Status| Current status of the customer’s policy (Active, Inactive, Lapsed). | Text
-Creation Date | Creation date | Date
-Created By | User who created the Customer  | Date
+CreationDate | Creation date | Date
+CreatedBy | User who created the Customer  | Date
 
 - **Insurance Type Metadata**
 Metadata Field | Definition | Field Type
 --- | --- | ---
-Policy Name | Name of the insurance policy (e.g., Life Insurance, Auto Insurance). | Text
-Policy Type | Enum values: Life, Auto, Home, Health, Business. | Text (Enable Option List)
-Premium Amount | The cost of the insurance policy. | Integer
-Coverage Limit | Maximum coverage provided by the policy. | Integer
-Term Length | Duration of the policy (e.g., 10 years, 20 years). | Integer
+PolicyName | Name of the insurance policy (e.g., Life Insurance, Auto Insurance). | Text
+PolicyType | Enum values: Life, Auto, Home, Health, Business. | Text (Enable Option List)
+PremiumAmount | The cost of the insurance policy. | Integer
+CoverageLimit | Maximum coverage provided by the policy. | Integer
+TermLength | Duration of the policy (e.g., 10 years, 20 years). | Integer
 Risk Category | Classification of risk based on customer profile.| Text (Enable Option List)
-Creation Date | Creation date | Date
-Created By | User who created the Customer  | Date
 
 - **HR Department Metadata**
 Metadata Field | Definition | Field Type
 --- | --- | ---
-Customer ID | Unique identifier for each customer. | Text
-Policy Name | Name of the insurance policy (e.g., Life Insurance, Auto Insurance). | Text
-Policy Type | Enum values: Life, Auto, Home, Health, Business. | Text (Enable Option List)
-Premium Amount | The cost of the insurance policy. | Integer
-Coverage Limit | Maximum coverage provided by the policy. | Integer
-Term Length | Duration of the policy (e.g., 10 years, 20 years). | Integer
-Risk Category | Classification of risk based on customer profile.| Text (Enable Option List)
-Creation Date | Creation date | Date
-Created By | User who created the Customer  | Date
+PolicyName | Name of the insurance policy (e.g., Life Insurance, Auto Insurance). | Text
+PolicyType | Enum values: Life, Auto, Home, Health, Business. | Text (Enable Option List)
+PremiumAmount | The cost of the insurance policy. | Integer
+CoverageLimit | Maximum coverage provided by the policy. | Integer
+TermLength | Duration of the policy (e.g., 10 years, 20 years). | Integer
+RiskCategory | Classification of risk based on customer profile.| Text (Enable Option List)
 
 - This Completes Creating Custom Metadata Fields.
 
-## Task 3: Create Profile Rules
+## Task 2 : Create Profile Rules
 
 A profile consists of one or more rules and a trigger value. The rules determine how metadata fields are displayed on the Check In, Update, Content Information, and Search pages and if a rule is used (depending on how it is evaluated). Each rule consists of the following:
 
@@ -255,14 +209,14 @@ A profile consists of one or more rules and a trigger value. The rules determine
     - A document type: These can use components based on document metadata fields.
     - A user type: These can use components based on user metadata fields.
 
-- Click Edit button to give name of headder.
-- **Enter the header name in text box** then click ok.
+- Click Edit button to give name of header.
+- Enter the **header name** in text box then click ok.
          ```
          <copy>Customer Profile Metadata Fields</copy>
          ```
  ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step3.png "This image shows the WCC Add Profile Rule menu")
 
-- Click Fields add MetaData.
+- Click **Fields** add MetaData.
   - Once the Edit Rule config screen open click Add button.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step4.png "This image shows the WCC Add Profile Rule menu")
 - Click **Display Information fields check box** to show custom meta data select.
@@ -282,10 +236,10 @@ A profile consists of one or more rules and a trigger value. The rules determine
 - **Has Restricted list (optional):** Allows the list metadata field to be restricted to either a specific list of values or to a filtered list of values.
 - Once you enter the all the information click ok to add metadata to Profile Rule.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step6.png "This image shows the WCC Add Profile Rule menu")
-- Similarly Add all other metadata according the Customer Profile MetaData.
+- Similarly Add all other metadata according the **Customer Profile MetaData**.
 - Create similar Rule for Insurance Type MetaData and HR Department Metadata and Add the associated meta data to the rule.
 
-## Task 4: Create Profile
+## Task 3 : Create Profile
 
 Administrators can use content profiles to selectively include or reorder metadata fields to produce targeted Check In, Update, Content Information, and Search pages. Content profiles do not create or modify any Oracle WebCenter Content Server tables.They are simply used as a type of filter for what information is displayed.
 
@@ -308,29 +262,29 @@ To create a new profile:
   ![TThis image shows the WCC Add Profile Rule menu](./images/task2-create-custom-metada-step1.png "This image shows the WCC Add Profile Rule menu")
 - Click  Configuration Manger > Profile button in Configuration Manager Menu.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step1.png "This image shows the WCC Add Profile Rule menu")
-- Click Trigger drop downs field and select Customer value in option list, click ok.
+- Click **Trigger** drop downs field and select Customer value in option list, click ok.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step2.png "This image shows the WCC Add Profile Rule menu")
-- Click Add button.
-- Enter the name of the new profile and click OK.
+- Click **Add** button.
+- Enter the **name** of the new profile and click OK.
  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step3.png "This image shows the WCC Add Profile Rule menu")
-- Enter the name of the new profile and click OK.
+- Enter the **name** of the new profile and click OK.
          ```
          <copy>CustomerProfileMetadata </copy>
          ```
-  - On the Add/Edit Profile page, enter the following information:
-    - Display label: Specify how the profile is listed in menus.
+  - On the **Add/Edit** Profile page, enter the following information:
+    - **Display label:** Specify how the profile is listed in menus.
             ```
                 <copy>Customer Profile </copy>
              ```
-    - Description: brief description of the profile.
+    - **Description:** brief description of the profile.
                 ```
                 <copy>Profile for Customer Profile Metadata  </copy>
              ```
-    - Trigger list: the list values associated with the trigger.
-    - Exclude non-rule fields: Select to exclude all metadata fields that do not belong to the rules included in the profile.
-    - Restrict personalization: Select to suppress check in or search links to a particular user or group of users. Idoc Script code based on user information is entered into the Profile Links page and must evaluate to true before a link is displayed. If deselected (default), all links are displayed for all users by default unless evaluated by another profile. Click Edit to customize the list of users.
+    - **Trigger list:** the list values associated with the trigger.
+    - **Exclude non-rule fields:** Select to exclude all metadata fields that do not belong to the rules included in the profile.
+    - **Restrict personalization:** Select to suppress check in or search links to a particular user or group of users. Idoc Script code based on user information is entered into the Profile Links page and must evaluate to true before a link is displayed. If deselected (default), all links are displayed for all users by default unless evaluated by another profile. Click **Edit** to customize the list of users.
     ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step4.png "This image shows the WCC Add Profile Rule menu")
-- Click Add to include rules in the new profile.
+- Click **Add** to include rules in the new profile.
 
   - **Note:-**
     - You cannot add rules to the profile until you create and define them using the Configuration Manager: Rules tab.
@@ -339,31 +293,31 @@ To create a new profile:
     - Click OK.
     - The new profile is included in the Profiles list on the Profiles tab.
 
-## Task 5: Restricting Profile Values in Search and Check in
+## Task 4 : Restricting Profile Values in Search and Check in
 
 - When a profile is enabled on the Edit Content Profile Links page, the profile is available from the Search and New Check In menus on the toolbar.
 - If no profiles are enabled for display, the Search and New Check In menus become direct links to the Advanced Search page and standard Content Check In Form, respectively.
 - After a profile has been created, it appears in the Search and New Check In menus on the toolbar after refreshing the browser session.
 - By default, all profiles are listed as options under both menus. However, not every user is authorized to use all of the listed profiles.
-- On the Edit Content Profile Links page, select or clear applicable check boxes to specify the profiles to display.
+- On the **Edit Content Profile Links page**, select or clear applicable check boxes to specify the profiles to display.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step6.png "This image shows the WCC Add Profile Rule menu")
-- Click Restricted personalization links check box as Enabled .
-- Click Edit button .
+- **Click restricted personalization links** check box as Enabled .
+- Click **Edit** button .
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step7.png "This image shows the WCC Add Profile Rule menu")
-- Click Has Script for the check-in link check box and Click Edit Button.
+- **Click Has Script** for the check-in link check box and Click Edit Button.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step9.png "This image shows the WCC Add Profile Rule menu")
-- Click Add button in Condition box.
-- Enter the name for the condition.
+- Click **Add** button in Condition box.
+- Enter the **name** for the condition.
             ```
                 <copy>HideForOtherUser </copy>
              ```
  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step8.png "This image shows the WCC Add Profile Rule menu")
  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step10.png "This image shows the WCC Add Profile Rule menu")
 
-- Choose appropriate condition to hide the link then click add.
-- The selected condition will be added to Clauses. then Click ok.
+- Choose appropriate condition to hide the link then click **add**.
+- The selected condition will be added to Clauses. then Click **ok**.
 
-## Task 6: Create Workflows
+## Task 5 : Create Workflows
 
 - A workflow specifies how to route content for review and approval before it is released to the system.
 - The workflow notifies users by e-mail when they have a file to review. For information about workflow types and uses
@@ -398,50 +352,50 @@ After a workflow is enabled, it goes through several specific stages:
 
 - **To create Workflow in WCC follow these steps:**
 - Login to WebCenter Content Administration Desktop Client as user with Administrator Privilege.
-- Click on WorkflowAdmin
+- Click on **WorkflowAdmin**
  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step1.png "This image shows the WCC Add Profile Rule menu")
-- Click the Criteria tab.
-- Click Add Button.
+- Click the **Criteria** tab.
+- Click **Add** Button.
  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step2.png "This image shows the WCC Add Profile Rule menu")
-- On the New/Edit Criteria Workflow page, enter a name in the Workflow Name field. Maximum length is 30 characters. Special characters (; @&, and so on) are not allowed. You cannot change the workflow name after the workflow is created.
+- On the **New/Edit Criteria Workflow page**, enter a **name** in the Workflow Name field. Maximum length is 30 characters. Special characters (; @&, and so on) are not allowed. You cannot change the workflow name after the workflow is created.
             ```
                 <copy> CustomerPolicyManagement </copy>
              ```
-- Enter a detailed description for the workflow in the Description field.
+- Enter a **detailed description** for the workflow in the Description field.
             ```
                 <copy> Manages insurance policy documents uploaded by agents </copy>
              ```
-- Select the Security Group from the list.
+- Select the **Security Group** from the list.
            ```
                 <copy> Customer Access  </copy>
              ```
-- Select an option from Original Author Edit Rule to specify if the original author can edit the revision or create a new revision if the item is rejected.
+- Select an option from **Original Author Edit Rule** to specify if the original author can edit the revision or create a new revision if the item is rejected.
  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step3.png "This image shows the WCC Add Profile Rule menu")
-- To use a workflow template, select the Use Template check box and select the template name. This box is displayed only if a template currently exists. For more information, see Workflow and Script Templates.
+- To use a workflow template, select the **Use Template** check box and select the template name. This box is displayed only if a template currently exists. For more information, see Workflow and Script Templates.
 - To create a **Criteria workflow, select the Has Criteria Definition check box.** To create a sub-workflow, deselect the check box.
-- For a Criteria workflow, define the criteria by choosing the appropriate **Field, Operator, and Value. Field values include Content ID, Author, Type, Account and any custom metadata of type Text or Long Text**.
+- For a Criteria workflow, define the criteria by choosing the appropriate **Field, Operator, and Value. Field values include ContentID, Author, Type, Account and any custom metadata of type Text or Long Text**.
            ```
                 <copy> Life Insurance </copy>
              ```
-- Click OK.
+- Click **OK**.
 
-- Create steps or to add another step, click Add in the right pane of the Workflow Admin page.
+- Create steps or to add another step, click **Add** in the right pane of the Workflow Admin page.
  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step4.png "This image shows the WCC Add Profile Rule menu")
-- On the Add New/Edit Step page, enter an appropriate Name for the step. You cannot change the name after the step is created. The name is usually descriptive of the step (for example, EditorialReview or TechnicalReview).
+- On the **Add New/Edit Step page**, enter an appropriate **Name** for the step. You cannot change the name after the step is created. The name is usually descriptive of the step (for example, EditorialReview or TechnicalReview).
          ```
                 <copy> VerifyClaimDetails </copy>
              ```
-- Enter a Description for the step.
+- Enter a **Description** for the step.
          ```
                 <copy> Verify the Claim Details Submitted by the user </copy>
              ```
-  - Specify the authority level of the users for the step:
-    - Users can review the current revision: Users can approve or reject the revision but cannot edit the revision.
-    - Users can review and edit (replace) the current revision: Users can edit the revision, approve it, or reject it. An edit does not update the revision.
-    - Users can review the current revision or create a new revision: Users can edit the revision, approve it, or reject it. An edit updates the revision. This option preserves the original content and provides an audit trail of changes.
+  - Specify the **authority** level of the users for the step:
+    - Users can review the **current revision**: Users can approve or reject the revision but cannot edit the revision.
+    - Users can **review and edit (replace) the current revision**: Users can edit the revision, approve it, or reject it. An edit does not update the revision.
+    - Users can **review the current revision or create a new revision**: Users can edit the revision, approve it, or reject it. An edit updates the revision. This option preserves the original content and provides an audit trail of changes.
  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step7.png "This image shows the WCC Add Profile Rule menu")
-  - Select the type of users to be added to the step. Multiple types can be defined:
-    - To add a group of users defined by an alias, click Add Alias. On the Add Alias to Step page, choose the alias from the displayed list.
+  - Select the **type** of users to be added to the step. Multiple types can be defined:
+    - To add a group of users defined by an alias, click **Add Alias**. On the Add Alias to Step page, choose the alias from the displayed list.
     - To add individual **user logins, click Add User**. On the Add User to Step page:
     - To narrow the list of users, **select the Use Filter check box**, click Define Filter, select the **filter criteria**, and click OK.
     - To select a **range of users**, click the first user, then press and **hold Shift and click the last user in the range**.
@@ -456,26 +410,26 @@ After a workflow is enabled, it goes through several specific stages:
      ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step8.png "This image shows the WCC Add Profile Rule menu")
   - Typically, exit conditions are useful when metadata could be changed by an external process during the workflow step. Use the following instructions if the step requires additional exit conditions to pass to the next step:
     - Select the **Use Additional Exit Condition check box**.
-    - Click Edit.
+    - Click **Edit**.
     - On the Edit **Additional Exit Condition page**, select a workflow condition or a metadata field from the Field list.
     - Select an operator from the **Operator list**. Operator is a dependent choice list that shows operators associated with the Field.
-    - Select a value from the Value list. Value is a dependent list based on the option chosen as the Field.
-    - Click Add to add the conditional statement to the Condition Clause. The clause appears in the Condition Clause box. You can append multiple clauses with AND statements.
+    - Select a value from the **Value list**. Value is a dependent list based on the option chosen as the Field.
+    - Click **Add** to add the conditional statement to the Condition Clause. The clause appears in the Condition Clause box. You can append multiple clauses with AND statements.
     - Repeat for as many conditions as required. To modify an expression, select it in the Condition Clause box, change the Field, Operator, or Value, and click Update.
-    - To modify the condition expression, select the Custom Condition Expression check box and edit the script (for example, use OR not AND for a condition). The additional exit conditions must be Idoc Script statements that evaluate to true or false. Do not enclose the code in Idoc Script tags <$ $>.
+    - To modify the condition expression, select the **Custom Condition Expression** check box and edit the script (for example, use OR not AND for a condition). The additional exit conditions must be Idoc Script statements that evaluate to true or false. Do not enclose the code in Idoc Script tags <$ $>.
     - Caution:
-      - If Custom Condition Expression is deselected, the expression reverts to its original definition and all modifications are lost.
-    - Click OK.
+      - If **Custom Condition Expression** is deselected, the expression reverts to its original definition and all modifications are lost.
+    - Click **OK**.
 
-- If the workflow requires conditional steps or special processing, click the Events tab and add the appropriate scripts. For more information, see **Creating a Jump**.
+- If the workflow requires conditional steps or special processing, click the **Events** tab and add the appropriate scripts. For more information, see **Creating a Jump**.
      ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step9.png "This image shows the WCC Add Profile Rule menu")
-- Click OK.
-  - Add, edit, and delete steps as necessary to complete the workflow.
-    - To add another step to the workflow, repeat previous steps.
-    - To edit an existing step, select the step and click Edit.
-    - To delete an existing step, select the step and click Delete.
-- Ensure that the correct workflow is selected in the left pane, and click Enable.
-- On the confirmation page, click Yes to activate the selected workflow.
+- Click **OK.**
+  - Add, **edit**, and delete steps as necessary to complete the workflow.
+    - To **add** another step to the workflow, repeat previous steps.
+    - To **edit** an existing step, select the step and click Edit.
+    - To **delete** an existing step, select the step and click Delete.
+- Ensure that the **correct workflow** is selected in the left pane, and click Enable.
+- On the confirmation page, click **Yes** to activate the selected workflow.
 
 This Completes this Live Lab.
 

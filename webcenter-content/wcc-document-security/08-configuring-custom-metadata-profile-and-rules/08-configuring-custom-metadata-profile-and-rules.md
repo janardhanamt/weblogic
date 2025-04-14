@@ -160,17 +160,19 @@ PolicyType | Enum values: Life, Auto, Home, Health, Business. | Text (Enable Opt
 PremiumAmount | The cost of the insurance policy. | Integer
 CoverageLimit | Maximum coverage provided by the policy. | Integer
 TermLength | Duration of the policy (e.g., 10 years, 20 years). | Integer
-Risk Category | Classification of risk based on customer profile.| Text (Enable Option List)
+RiskCategory | Classification of risk based on customer profile.| Text (Enable Option List)
 
 - **HR Department Metadata**
 Metadata Field | Definition | Field Type
 --- | --- | ---
-PolicyName | Name of the insurance policy (e.g., Life Insurance, Auto Insurance). | Text
-PolicyType | Enum values: Life, Auto, Home, Health, Business. | Text (Enable Option List)
-PremiumAmount | The cost of the insurance policy. | Integer
-CoverageLimit | Maximum coverage provided by the policy. | Integer
-TermLength | Duration of the policy (e.g., 10 years, 20 years). | Integer
-RiskCategory | Classification of risk based on customer profile.| Text (Enable Option List)
+EmployeeID | Unique identifier assigned to an employee. | Text
+FullName | Employee’s full name. | Text
+Department | The department the employee belongs to (e.g., Claims, Underwriting, IT).| Text (Enable Option List)
+JobTitle | Designation of the employee within the company. | Text
+Email | Official email address of the employee. | Text
+PhoneNumber | Employee’s contact number. | Integer
+AccessLevel | Defines the level of access (Read-Only, Edit, Admin). | Text (Enable Option List)
+Reports To |Name or ID of the reporting manager. | Text
 
 - This Completes Creating Custom Metadata Fields.
 

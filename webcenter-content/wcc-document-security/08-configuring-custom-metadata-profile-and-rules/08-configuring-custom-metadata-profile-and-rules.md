@@ -113,16 +113,16 @@ This lab assumes you have completed:
    - **To create LOV Values:**
      1. Click **Enable Option List** checkbox.
      2. After enabling the Option List checkbox, click **Configure** button.
-   ![WCC Add custom metadata field menu](./images/task2-create-custom-metada-step5.png"This image shows the WCC Add custom metadata field menu")
+   ![WCC Add custom metadata field menu](./images/task2-create-custom-metada-step5.png" This image shows the WCC Add custom metadata field menu")
    - **Configure Option List:**
-     - Once Option list edit config menu opens please follow these steps.
+     - Once Option list edit config dialog opens please follow these steps.
           ![WCC Add custom metadata field menu](./images/task2-create-custom-metada-step6.png "This image shows the WCC Add custom metadata field menu")
 
      - Select **Select List Validated** in Option List Type LOV list
      - Click **Use option list** check box and type the name of the LOV.
      - Click **Edit** Button
          ![This image shows the WCC Add custom metadata field menu](./images/task2-create-custom-metada-step7.png "This image shows the WCC Add custom metadata field menu")
-     - Enter the required options, such as 'Life Insurance,' in option menu
+     - Enter the required options, such as 'Life Insurance,' in option drop-down
             ```
           <copy>Life Insurance</copy>
            ```
@@ -231,7 +231,7 @@ A profile consists of one or more rules and a trigger value. The rules determine
          ```
  ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step2.png "This image shows the WCC Add Profile Rule menu")
 
-- Select **Is group** check box this will make this group metadata headder to appear in the form while creating document using this Profile Rule
+- Select **Is group** check box this will make this group metadata header to appear in the form while creating document using this Profile Rule
 - Select **Has group header check box**
 - Click **Edit** button to give name of header.
 - Enter the **header name** in text box then click ok.
@@ -248,15 +248,15 @@ A profile consists of one or more rules and a trigger value. The rules determine
     - A document type: These can use components based on document metadata fields.
     - A user type: These can use components based on user metadata fields.
 
-- Click **Fields** add MetaData.
+- Click **Fields** add MetaData
   - Once the Edit Rule config screen open click **Add** button.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step4.png "This image shows the WCC Add Profile Rule menu")
 - Click **Display Information fields** check box to show custom metadata select.
-- Select **Field Name** as **CustomerName** to add part of Rule.
+- Select **Field Name** as **CustomerId** to add part of Rule.
 - Select **top** as Field position (required): Adjusts the general placement order of the metadata field. Values are top, middle, and bottom.
 - Once you select the both the values click **ok**.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task3-create-rule-step5.png "This image shows the WCC Add Profile Rule menu")
-- Once you click **ok** there will other menu will open here you can customize metadata details
+- Once you click **ok** there will other dialog will open here you can customize metadata details
 - Select **Edit** as Field type (required): Determines how the metadata field is displayed on the Check In and Search pages.Values can be Edit, Info Only, Hidden, Excluded, or Required. If required, a message is also required.
 - Click **Use custom label** check box the enter the field label this allow to customize the metadata label values .
          ```
@@ -336,20 +336,18 @@ Although you create rules before you create triggers and profiles, it is necessa
 - Click on **Configuration Manager** Link
   ![TThis image shows the WCC Add Profile Rule menu](./images/task2-create-custom-metada-step1.png "This image shows the WCC Add Profile Rule menu")
 - Select **IdcProfile** Metadata and click **Edit Values**
-  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step6.png "This image shows the WCC Add Profile Rule menu")
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-add-step6.png "This image shows the WCC Add Profile Rule menu")
 - Click **Add** to add the values
-- Select **IdcProfile** Metadata and click **Edit Values**
   ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step10.png "This image shows the WCC Add Profile Rule menu")
-- Enter DProfileTriggerValue as
+- Enter **DProfileTriggerValue** as
          ```
          <copy>Customer </copy>
          ```
-- Enter DProfileTriggerOrder values as
+- Enter **DProfileTriggerOrder** values as
          ```
          <copy>1 </copy>
          ```
 - click **ok**
-- Select **IdcProfile** Metadata and click **Edit Values**
   ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step8.png "This image shows the WCC Add Profile Rule menu")
 - Similarly Add values for **Insurance Type** and  **HR Department**
 - Click **Close** once you are done.
@@ -361,16 +359,13 @@ To create a new profile:
   ![TThis image shows the WCC Add Profile Rule menu](./images/task2-create-custom-metada-step1.png "This image shows the WCC Add Profile Rule menu")
 - Click  **Configuration Manger** > **Profile** button in Configuration Manager.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step1.png "This image shows the WCC Add Profile Rule menu")
-- Click **Trigger** drop downs field and select **Customer** value in option list, click **ok**.
-  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step2.png "This image shows the WCC Add Profile Rule menu")
-  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step3.png "This image shows the WCC Add Profile Rule menu")
 - Click **Add** button.
-- Enter the **name** of the new profile and click **oK**.
 
 - Enter the **name** of the new profile and click **OK**.
          ```
          <copy>CustomerProfileMetadata </copy>
          ```
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step11.png "This image shows the WCC Add Profile Rule menu")
   - On the **Add/Edit** Profile page, enter the following information:
     - **Display label:** Specify how the profile is listed in menus.
             ```
@@ -380,21 +375,32 @@ To create a new profile:
                 ```
                 <copy>Profile for Customer Profile Metadata  </copy>
              ```
-    - **Trigger list:** the list values associated with the trigger.
+     ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step2.png "This image shows the WCC Add Profile Rule menu")
+    - Click **Trigger** drop downs field and select **Customer** value in option list, click **ok**.
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step3.png "This image shows the WCC Add Profile Rule menu")
     - **Exclude non-rule fields:** Select check box to exclude all metadata fields that do not belong to the rules included in the profile.
     - **Restrict personalization:** This Option used in  check in or search links to a particular user or group of users. Idoc Script code based on user information is entered into the Profile Links page and must evaluate to true before a link is displayed. If deselected (default), all links are displayed for all users by default unless evaluated by another profile.
+    - Click **Add** to include rules in the new profile.
     ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step4.png "This image shows the WCC Add Profile Rule menu")
-- Click **Add** to include rules in the new profile.
-
+    - On the Add Rule in Profile page, select **CustomerProfileMetadata** rules from the list.
+    - select **Top** value lov value from Rule Priority field.
+    - Click **OK**.
   - **Note:-**
     - You cannot add rules to the profile until you create and define them using the Configuration Manager: Rules tab.
-    - On the Add Rule in Profile page, select rules from the list and assign them a general placement priority value.
-    - Adjust the placement order of the rules in the list by pressing the Up or Down button. The position of each rule in the list is relevant to its priority in the evaluation process. The general position (top, middle, or bottom) in the list is established when the rule is initially added to the profile. The buttons further refine the placement by moving the rule to a more precise position.
-    - Click **OK**.
-    - The new profile is included in the Profiles list on the Profiles tab.
+    - To adjust the placement order of the rules in the list by pressing the Up or Down button.
+    - The position of each rule in the list is relevant to its priority in the evaluation process. The general position (top, middle, or bottom) in the list is established when the rule is initially added to the profile.
+    - The buttons further refine the placement by moving the rule to a more precise position.
+
+  - Finally click **ok** to create new profile.
+  - The new profile is included in the Profiles list on the Profiles tab.
+
   - Similarly create **Insurance Type Metadata** profile and **HR Department Metadata** profile
-    - for Insurance Type Metadata profile select trigger value as **Insurance type**
-    - for HR Department Metadata profile select trigger value as **HR Department**
+    - for Insurance Type Metadata profile
+      - select trigger value as **Insurance type**
+      - Select rule as **InsuranceTypeMetadata**
+    - for HR Department Metadata profile
+      - select trigger value as **HR Department**
+      - Select rule as **HRDepartmentMetadata**
 
 - This Completes Create Profile task .
 

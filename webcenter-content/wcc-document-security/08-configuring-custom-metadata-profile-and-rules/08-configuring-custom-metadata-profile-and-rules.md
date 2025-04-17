@@ -45,10 +45,18 @@ Create the following before starting this lab
   - Security Group.
     - CustomerAccess.
     - PolicyAccess.
+    - HRManager
+    - HRAccess
   - Roles
-    - InsuranceAgent.
+    - Customer.
     - PolicyAdmin.
-    - ClaimOfficer.
+    - InsuranceAgent.
+    - HRManager
+  - Refer the lab 3 Task 5 to mapping Security Groups and Roles.
+    - Map Security Group **CustomerAccess** - **PolicyAdmin**, **InsuranceAgent** and **Customer**.
+    - Map Security Group **PolicyAccess** - **PolicyAdmin**
+    - Map Security Group **HRAccess** - **HRManager**
+  - Refer the lab 2 create Group in **IDCS/Weblogic** with the same name as **Roles**.
 
 This lab assumes you have completed:
 
@@ -528,34 +536,51 @@ Ensure that the **correct workflow** is selected in the left pane, and click Ena
 - On the confirmation page, click **Yes** to activate the selected workflow.
 - Similarly create the  workflow for Insurance Claims Processing,  HR Document Access Control
 
+## Task 5 : Verify Custom Metadata Profile Rule and Profile created so for
+
 Verifying What We Have Created So Far, Follow the steps below to verify the configurations and workflows set up in Oracle WebCenter:
 
-- Login to **WebCenter**
-- Check the Created Profiles
-  - Click on Search / Check-In in the top-left corner
-  - You should see the profiles created so far listed here.
-- Check-In a Document
-  - Click Check-In on the left-hand side.
-  - Select one of the available profile options.
-  - Ensure the custom metadata fields created based on the profile rules are displayed.
-- Verify the Workflow
-  - Go to Check-In on the left panel.
-  - From the drop-down, select Customer.
-  - Fill in the required information.
-  - Ensure the following selections:
-    - Security Group: CustomerAccess
-    - Policy Type: Life Insurance
-  - Upload the document and complete the check-in process.
-  - The document should now be routed into the workflow.
-- Login as the Workflow Approver
-  - Log in to WebCenter using the PolicyAdmin user credentials.
-  - Navigate to My Content Server.
-  - Click on My Workflow Assignments.
-  - You should see the checked-in document assigned to the PolicyAdmin role through the workflow.
+- Login to **WebCenter**  Redwood UI
+  - Check the Created Profiles
+    - Click **Upload** button in the top-left corner
+   ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step1.png "This image shows the WCC Add Profile Rule menu")
+    - You should see the profiles created so far listed here.
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step2.png "This image shows the WCC Add Profile Rule menu")
+  - Check Custom Metadata created so for
+    - Click **Upload** button in the top-left corner
+    - Select **Customer Profile**  on the left-hand side of the profile drop-down menu.
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step3.png "This image shows the WCC Add Profile Rule menu")
+    - Ensure the custom metadata fields created based on the profile rules are displayed.
+    - Similarly, change the profile dropdown values and verify that the corresponding profile metadata is displayed based on the profile rules.
+  - Verify the Workflow
+    - Click **Upload** button in the top-left corner
+    - Select **Customer Profile**  on the left-hand side of the profile drop-down menu.
+    - Add (+) button at the top or clicking the “Document Upload” prompt in the center of the drawer. Alternatively, you can drag files from your desktop in to the drop area.
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step8.png "This image shows the WCC Add Profile Rule menu")
+    - Fill in the required information on right side metadata fields
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step5.png "This image shows the WCC Add Profile Rule menu")
+      - Ensure the following selections:
+        - Select Policy Type: **Life Insurance**
+         ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step4.png "This image shows the WCC Add Profile Rule menu")
+        - Click on **Security** Tab
+         ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step6.png "This image shows the WCC Add Profile Rule menu")
+        - select Security Group: **CustomerAccess**
+    - Click **Upload** button, the document should complete the check-in process.
+    - The document should now be routed into the workflow.
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step7.png "This image shows the WCC Add Profile Rule menu")
 
-- This Completes Create Workflows task .
+Verify document assigned to workflow configured user
 
-## Task 5 : Restricting Profile Values in Search and Check in
+- Login as the Workflow Approver(**Policy Admin** User)
+- Click on **brand logo** on left corner of screen
+- Click on **Content In Workflow**
+- You should see the checked-in document assigned to the PolicyAdmin role through the workflow.
+
+Try logging in with a different user, change the access rights, and verify that one user cannot access another user's data if their role is not mapped to the document's security group.
+
+This Completes Create Workflows task .
+
+## Task 6 : Restricting Profile Values in Search and Check in
 
 When a profile is enabled on the Edit Content Profile Links page, the profile is available from the Search and New Check In menus on the toolbar.
 
@@ -598,8 +623,11 @@ Similarly, perform this step if hiding the search link is required.
 Verifying What We Have Created So Far,
 
 - Login to **WebCenter**
-- Check the Created Profiles
-  - Click on Search / Check-In in the top-left corner
+  - Check the Created Profiles
+    - Click **Upload** button in the top-left corner
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step1.png "This image shows the WCC Add Profile Rule menu")
+    - You should see the profiles created so far listed here.
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task5-redwood-ui-step9.png "This image shows the WCC Add Profile Rule menu")
   - Since you are not logged in as the PolicyAdmin user, the Customer Profile option should not be visible
 
 This Completes this Live Lab.

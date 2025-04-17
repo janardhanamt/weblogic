@@ -385,22 +385,22 @@ To create a new profile:
     - On the Add Rule in Profile page, select **CustomerProfileMetadata** rules from the list.
     - select **Top** value lov value from Rule Priority field.
     - Click **OK**.
-  - **Note:-**
-    - You cannot add rules to the profile until you create and define them using the Configuration Manager: Rules tab.
-    - To adjust the placement order of the rules in the list by pressing the Up or Down button.
-    - The position of each rule in the list is relevant to its priority in the evaluation process. The general position (top, middle, or bottom) in the list is established when the rule is initially added to the profile.
-    - The buttons further refine the placement by moving the rule to a more precise position.
+    > *Note:*
+    - *You cannot add rules to the profile until you create and define them using the Configuration Manager: Rules tab.*
+    - *To adjust the placement order of the rules in the list by pressing the Up or Down button.*
+    - *The position of each rule in the list is relevant to its priority in the evaluation process. The general position (top, middle, or bottom) in the list is established when the rule is initially added to the profile.*
+    - *The buttons further refine the placement by moving the rule to a more precise position.*
 
-  - Finally click **ok** to create new profile.
-  - The new profile is included in the Profiles list on the Profiles tab.
+- Finally click **ok** to create new profile.
+- The new profile is included in the Profiles list on the Profiles tab.
 
-  - Similarly create **Insurance Type Metadata** profile and **HR Department Metadata** profile
-    - for Insurance Type Metadata profile
-      - select trigger value as **Insurance type**
-      - Select rule as **InsuranceTypeMetadata**
-    - for HR Department Metadata profile
-      - select trigger value as **HR Department**
-      - Select rule as **HRDepartmentMetadata**
+- Similarly create **Insurance Type Metadata** profile and **HR Department Metadata** profile.
+  - for Insurance Type Metadata profile
+    - select trigger value as **Insurance type**
+    - Select rule as **InsuranceTypeMetadata**
+  - for HR Department Metadata profile
+    - select trigger value as **HR Department**
+    - Select rule as **HRDepartmentMetadata**
 
 - This Completes Create Profile task .
 
@@ -437,9 +437,10 @@ After a workflow is enabled, it goes through several specific stages:
 - Depending on how the edit criteria is defined, the most recent Review/Edit Revision or Review/New Revision step can result in a new revision or an updated revision.
 - A revision can be released:
 
-- **To create Workflow in WCC follow these steps:**
+To create Workflow in WCC follow these steps
+
 - Login to WebCenter Content Administration Desktop Client as user with Administrator Privilege.
-- Click on **WorkflowAdmin**
+- Click on **Workflow Admin**
  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step1.png "This image shows the WCC Add Profile Rule menu")
 - Click the **Criteria** tab.
 - Click **Add** Button.
@@ -454,7 +455,7 @@ After a workflow is enabled, it goes through several specific stages:
              ```
 - Select the **Security Group** from the list.
            ```
-                <copy> Customer Access  </copy>
+                <copy> CustomerAccess  </copy>
              ```
 - Select **Edit Revision** option from **Original Author Edit Rule** - original author can edit the revision or create a new revision if the item is rejected.
  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step3.png "This image shows the WCC Add Profile Rule menu")
@@ -542,7 +543,7 @@ Verifying What We Have Created So Far, Follow the steps below to verify the conf
   - From the drop-down, select Customer.
   - Fill in the required information.
   - Ensure the following selections:
-    - Security Group: Customer Access
+    - Security Group: CustomerAccess
     - Policy Type: Life Insurance
   - Upload the document and complete the check-in process.
   - The document should now be routed into the workflow.
@@ -556,16 +557,24 @@ Verifying What We Have Created So Far, Follow the steps below to verify the conf
 
 ## Task 5 : Restricting Profile Values in Search and Check in
 
-- When a profile is enabled on the Edit Content Profile Links page, the profile is available from the Search and New Check In menus on the toolbar.
+When a profile is enabled on the Edit Content Profile Links page, the profile is available from the Search and New Check In menus on the toolbar.
+
 - If no profiles are enabled for display, the Search and New Check In menus become direct links to the Advanced Search page and standard Content Check In Form, respectively.
 - After a profile has been created, it appears in the Search and New Check In menus on the toolbar after refreshing the browser session.
 - By default, all profiles are listed as options under both menus. However, not every user is authorized to use all of the listed profiles.
-- On the **Edit Content Profile Links page**, select or clear applicable check boxes to specify the profiles to display.
+
+Login to WebCenter Content Administration Desktop Client as user with Administrator Privilege.
+
+- Click on **Configuration Manager** Link
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task2-create-custom-metada-step1.png "This image shows the WCC Add Profile Rule menu")
+- Click  **Configuration Manger** > **Profile** button in Configuration Manager.
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step13.png "This image shows the WCC Add Profile Rule menu")
+- Select **CustomerProfileMetadata** and Click **Edit** button.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step6.png "This image shows the WCC Add Profile Rule menu")
 - Click **Restricted personalization links** check box as Enabled .
 - Click **Edit** button .
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step7.png "This image shows the WCC Add Profile Rule menu")
-- **Click Has Script** for the check-in link check box and Click Edit Button.
+- **Click Has Script for the check-in link** check box and Click Edit Button.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task4-create-profile-step9.png "This image shows the WCC Add Profile Rule menu")
 - Click **Add** button in Condition box.
 - Enter the **name** for the condition.
@@ -581,8 +590,9 @@ Verifying What We Have Created So Far, Follow the steps below to verify the conf
 - to hide the link click **add**.
 - The selected condition will be added to Clauses. then Click **ok**.
 
-- Similarly, perform this step if hiding the search link is required.
-  - Repeat the above steps by selecting **Has script for the search link**
+Similarly, perform this step if hiding the search link is required.
+
+- Repeat the above steps by selecting **Has script for the search link**
 - Repeat the task 5 if you want to hide this option to other profiles also.
 
 Verifying What We Have Created So Far,

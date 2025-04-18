@@ -45,18 +45,23 @@ Create the following before starting this lab
   - Security Group.
     - CustomerAccess.
     - PolicyAccess.
-    - HRManager
     - HRAccess
   - Roles
-    - Customer.
     - PolicyAdmin.
     - InsuranceAgent.
     - HRManager
-  - Refer the lab 3 Task 5 to mapping Security Groups and Roles.
-    - Map Security Group **CustomerAccess** - **PolicyAdmin**, **InsuranceAgent** and **Customer**.
+  - Refer the Lab 3 Task 5 to mapping Security Groups and Roles.
+    - Map Security Group **CustomerAccess** - **PolicyAdmin** and **CustomerAccess**
+      - Assign **Admin** permission to PolicyAdmin
+      - Assign **Read,Write and Delete** permission to CustomerAccess
     - Map Security Group **PolicyAccess** - **PolicyAdmin**
+      - Assign **Read,Write and Delete** permission to PolicyAdmin
     - Map Security Group **HRAccess** - **HRManager**
-  - Refer the lab 2 create Group in **IDCS/Weblogic** with the same name as **Roles**.
+      - Assign **Read,Write and Delete** permission to HRManager
+  - Refer the Lab 2 Task 3 to map group membership to the User in **IDCS/Weblogic** with the same name as **Roles**.
+    - Map Role **PolicyAdmin** - **PolicyAdmin** and **InsuranceAgent** of IDCS user
+    - Map Role **InsuranceAgent** - **ClaimOfficer**  of IDCS user
+    - Map Role **HRManager** - **PolicyAdmin** of IDCS user
 
 This lab assumes you have completed:
 
@@ -491,10 +496,10 @@ To create Workflow in WCC follow these steps
     - Users can review the **current revision**: Users can approve or reject the revision but cannot edit the revision.
     - Users can **review and edit (replace) the current revision**: Users can edit the revision, approve it, or reject it. An edit does not update the revision.
     - Users can **review the current revision or create a new revision**: Users can edit the revision, approve it, or reject it. An edit updates the revision. This option preserves the original content and provides an audit trail of changes.
-  - for our example select the **review and edit (replace) the current revision**
+  - For our example select the **Users can review and edit (replace) the current revision**
   ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-adduser-step6.png "This image shows the WCC Add Profile Rule menu")
   - Select the type of **users** to be added to the step. Multiple types can be defined:
-    - To add individual user logins, click **Add User**. On the Add User to Step page:
+    - To add individual user, click **Add User**.
     - To narrow the list of users, search for the user and select **PolicyAdmin**  User.
     - click **OK**.
   ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step5.png "This image shows the WCC Add Profile Rule menu")
@@ -502,6 +507,20 @@ To create Workflow in WCC follow these steps
     - To add a group of users defined by an alias, click **Add Alias**. On the Add Alias to Step page, choose the alias from the displayed list.
 
 - Click **OK**.
+- To create one more  **step** by repeating above instruction using these details
+  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step13.png "This image shows the WCC Add Profile Rule menu")
+  - enter **Name** for the step
+         ```
+                <copy> InsuranceClaimsProcessing </copy>
+             ```
+  - Enter a **Description** for the step.
+           ```
+                <copy> Claim Officer verify  claim submitted for customer's policy </copy>
+             ```
+  - select authority as **Users can review and edit (replace) the current revision**
+  - select  **InsuranceAgent** as user in add user step
+    ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step14.png "This image shows the WCC Add Profile Rule menu")
+  - Click **ok**
 <!-- - Click the **Exit Conditions tab**.
   - Specify how many reviewers must approve the revision before it passes to the next step.
     - To require approval by all reviewers, select **All reviewers**.
@@ -534,9 +553,8 @@ Ensure that the **correct workflow** is selected in the left pane, and click Ena
  ![TThis image shows the WCC Add Profile Rule menu](./images/task5-create-workflow-step12.png "This image shows the WCC Add Profile Rule menu")
 
 - On the confirmation page, click **Yes** to activate the selected workflow.
-- Similarly create the  workflow for Insurance Claims Processing,  HR Document Access Control
 
-## Task 5 : Verify Custom Metadata Profile Rule and Profile created so for
+## Task 5 : Verify Custom Metadata Profile Rule and Profile and Workflow created so for
 
 Verifying What We Have Created So Far, Follow the steps below to verify the configurations and workflows set up in Oracle WebCenter:
 
